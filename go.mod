@@ -9,6 +9,10 @@ require (
 	github.com/Azure/azure-storage-blob-go v0.0.0-20190104215108-45d0c5e3638e
 	github.com/Azure/go-ansiterm v0.0.0-20170929234023-d6e3b3328b78
 	github.com/Azure/go-autorest v13.0.1+incompatible
+	github.com/Azure/go-autorest/autorest v0.9.3
+	github.com/Azure/go-autorest/autorest/azure/auth v0.4.2
+	github.com/Azure/go-autorest/autorest/to v0.3.0
+	github.com/Azure/go-autorest/autorest/validation v0.2.0 // indirect
 	github.com/BurntSushi/toml v0.3.1
 	github.com/DataDog/zstd v1.3.5
 	github.com/Masterminds/semver v0.0.0-20180403130225-3c92f33da7a8
@@ -21,9 +25,11 @@ require (
 	github.com/Shopify/toxiproxy v2.1.4+incompatible
 	github.com/StackExchange/wmi v0.0.0-20180116203802-5d049714c4a6
 	github.com/VividCortex/ewma v1.1.1
+	github.com/abourget/teamcity v0.0.0-00010101000000-000000000000
 	github.com/andy-kimball/arenaskl v0.0.0-20190311185018-6bf06cf57626
 	github.com/andybalholm/cascadia v1.0.0
 	github.com/apache/arrow v0.0.0-20190426170622-338c62a2a205
+	github.com/apache/arrow/go/arrow v0.0.0-20200115135315-ccdc4b076cbd
 	github.com/apache/thrift v0.0.0-20181211084444-2b7365c54f82
 	github.com/armon/circbuf v0.0.0-20150827004946-bbbad097214e
 	github.com/armon/go-radix v1.0.0
@@ -37,22 +43,19 @@ require (
 	github.com/cenkalti/backoff v2.1.1+incompatible
 	github.com/certifi/gocertifi v0.0.0-20191021191039-0944d244cd40
 	github.com/client9/misspell v0.3.4
+	github.com/cockroachdb/apd v1.1.0
 	github.com/cockroachdb/circuitbreaker v2.2.2-0.20190114160014-a614b14ccf63+incompatible
 	github.com/cockroachdb/cmux v0.0.0-20170110192607-30d10be49292
 	github.com/cockroachdb/cockroach-go v0.0.0-20181001143604-e0a95dfd547c
 	github.com/cockroachdb/crlfmt v0.0.0-20181113173958-3c56c65c97a1
 	github.com/cockroachdb/datadriven v0.0.0-20191203163246-053dcac06c27
 	github.com/cockroachdb/errors v1.2.4
-	github.com/cockroachdb/gogoproto v1.2.1-0.20190102194534-ca10b809dba0
 	github.com/cockroachdb/gostdlib v1.13.0
 	github.com/cockroachdb/logtags v0.0.0-20190617123548-eb05cc24525f
 	github.com/cockroachdb/pebble v0.0.0-20200114191501-c333ae77fe84
-	github.com/cockroachdb/raven-go v0.0.0-20170605202156-221b2b44fb33
 	github.com/cockroachdb/returncheck v0.0.0-20170227172625-e91bb28baf9d
 	github.com/cockroachdb/stress v0.0.0-20170808184505-29b5d31b4c3a
-	github.com/cockroachdb/teamcity v0.0.0-20180905144921-8ca25c33eb11
 	github.com/cockroachdb/ttycolor v0.0.0-20180709150743-a1d5aaeb377d
-	github.com/cockroachdb/vitess v2.2.0-rc.1.0.20180830030426-1740ce8b3188+incompatible
 	github.com/codahale/hdrhistogram v0.0.0-20161010025455-3a0bb77429bd
 	github.com/cpuguy83/go-md2man v1.0.8
 	github.com/davecgh/go-spew v1.1.1
@@ -71,11 +74,13 @@ require (
 	github.com/elastic/gosigar v0.10.0
 	github.com/elazarl/go-bindata-assetfs v1.0.0
 	github.com/facebookgo/clock v0.0.0-20150410010913-600d898af40a
+	github.com/getsentry/raven-go v0.2.0
 	github.com/ghemawat/stream v0.0.0-20171120220530-696b145b53b9
 	github.com/ghodss/yaml v1.0.0
 	github.com/go-logfmt/logfmt v0.4.0
 	github.com/go-ole/go-ole v1.2.2
 	github.com/go-sql-driver/mysql v1.4.1-0.20181218123637-c45f530f8e7f
+	github.com/gogo/protobuf v1.3.1
 	github.com/golang-commonmark/html v0.0.0-20180910111043-7d7c804e1d46
 	github.com/golang-commonmark/linkify v0.0.0-20180910111149-f05efb453a0e
 	github.com/golang-commonmark/markdown v0.0.0-20180910011815-a8f139058164
@@ -86,10 +91,12 @@ require (
 	github.com/golang/protobuf v1.3.2
 	github.com/golang/snappy v0.0.0-20180518054509-2e65f85255db
 	github.com/google/btree v1.0.0
-	github.com/google/flatbuffers v1.10.0
+	github.com/google/flatbuffers v1.11.0
 	github.com/google/go-cmp v0.3.0
+	github.com/google/go-github v17.0.0+incompatible
 	github.com/google/go-querystring v1.0.0
 	github.com/google/pprof v0.0.0-20190109223431-e84dfd68c163
+	github.com/googleapis/gax-go v2.0.2+incompatible // indirect
 	github.com/gorilla/websocket v1.4.0
 	github.com/grpc-ecosystem/grpc-gateway v1.9.5
 	github.com/grpc-ecosystem/grpc-opentracing v0.0.0-20180507213350-8e809c8a8645
@@ -112,6 +119,7 @@ require (
 	github.com/leanovate/gopter v0.2.5-0.20190402064358-634a59d12406
 	github.com/lib/pq v1.3.0
 	github.com/lightstep/lightstep-tracer-go v0.15.6
+	github.com/linkedin/goavro v2.1.0+incompatible
 	github.com/lufia/iostat v0.0.0-20170605150913-9f7362b77ad3
 	github.com/maruel/panicparse v1.1.2-0.20180806203336-f20d4c4d746f
 	github.com/marusama/semaphore v0.0.0-20190110074507-6952cef993b2
@@ -125,6 +133,7 @@ require (
 	github.com/montanaflynn/stats v0.4.1-0.20190115100425-713f2944833c
 	github.com/nightlyone/lockfile v0.0.0-20180618180623-0ad87eef1443
 	github.com/nlopes/slack v0.4.0
+	github.com/olekukonko/tablewriter v0.0.0-20170122224234-a0225b3f23b5
 	github.com/opencontainers/go-digest v1.0.0-rc1
 	github.com/opencontainers/image-spec v1.0.1
 	github.com/opentracing-contrib/go-observer v0.0.0-20170622124052-a52f23424492
@@ -133,6 +142,7 @@ require (
 	github.com/pelletier/go-toml v1.2.0
 	github.com/petar/GoLLRB v0.0.0-20130427215148-53be0d36a84c
 	github.com/petermattis/goid v0.0.0-20180202154549-b0b1615b78e5
+	github.com/pierrec/lz4 v2.4.0+incompatible // indirect
 	github.com/pkg/browser v0.0.0-20180916011732-0a3d74bf9ce4
 	github.com/pkg/errors v0.8.1
 	github.com/pmezard/go-difflib v1.0.0
@@ -153,7 +163,7 @@ require (
 	github.com/wadey/gocovmerge v0.0.0-20160331181800-b5bfa59ec0ad
 	go.etcd.io/etcd v0.5.0-alpha.5.0.20190816082442-4a2b4c8f7e0a
 	go.opencensus.io v0.18.0
-	golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2
+	golang.org/x/crypto v0.0.0-20191206172530-e9b2fee46413
 	golang.org/x/exp v0.0.0-20190426190305-956cc1757749
 	golang.org/x/lint v0.0.0-20190409202823-959b441ac422
 	golang.org/x/net v0.0.0-20190918130420-a8b05e9114ab
@@ -168,7 +178,9 @@ require (
 	google.golang.org/appengine v1.4.0
 	google.golang.org/genproto v0.0.0-20190111180523-db91494dd46c
 	google.golang.org/grpc v1.23.0
+	gopkg.in/yaml.v2 v2.2.2
 	honnef.co/go/tools v0.0.0-20190530104931-1f0868a609b7
+	vitess.io/vitess v0.0.0-00010101000000-000000000000
 )
 
 replace github.com/gogo/protobuf => github.com/cockroachdb/gogoproto v1.2.1-0.20190102194534-ca10b809dba0
