@@ -14,6 +14,7 @@ stages:
       GOOS: linux
     commands:
     - mkdir -p publish
+    - go get github.com/ianlancetaylor/cgosymbolizer
     - go test ./pkg/cmd/cockroach/...
     - go build -a -installsuffix cgo -o ./publish ./pkg/cmd/cockroach
 
