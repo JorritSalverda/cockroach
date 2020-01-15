@@ -1,0 +1,53 @@
+labels:
+  language: golang
+
+version:
+  semver:
+    major: 0
+    minor: 1
+
+stages:
+  build:
+    image: golang:1.13.6-alpine3.11
+    env:
+      CGO_ENABLED: 0
+      GOOS: linux
+    commands:
+    - go test ./...
+    - go build -a -installsuffix cgo -ldflags -o ./publish/${ESTAFETTE_GIT_NAME} .
+
+  bake:
+    image: extensions/docker:stable
+    action: build
+    inline: |
+      FROM scratch
+
+      COPY ${ESTAFETTE_GIT_NAME} /
+      COPY ca-certificates.crt /etc/ssl/certs/
+      
+      ENTRYPOINT ["/${ESTAFETTE_GIT_NAME}"]
+    repositories:
+    - jsalverda
+    path: ./publish
+    copy:
+    - /etc/ssl/certs/ca-certificates.crt
+
+  check-container:
+    parallelStages:
+      check-efficiency:
+        image: extensions/docker:stable
+        action: dive
+        repositories:
+        - jsalverda
+
+      vulnerability-scan:
+        image: extensions/docker:stable
+        action: trivy
+        repositories:
+        - jsalverda
+
+  push-to-docker-hub:
+    image: extensions/docker:stable
+    action: push
+    repositories:
+    - jsalverda
