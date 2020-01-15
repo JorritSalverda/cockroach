@@ -100,7 +100,6 @@ require (
 	github.com/gorilla/websocket v1.4.0
 	github.com/grpc-ecosystem/grpc-gateway v1.9.5
 	github.com/grpc-ecosystem/grpc-opentracing v0.0.0-20180507213350-8e809c8a8645
-	github.com/ianlancetaylor/cgosymbolizer v0.0.0-20170921033129-f5072df9c550
 	github.com/ianlancetaylor/demangle v0.0.0-20181102032728-5e5cf60278f6
 	github.com/inconshreveable/mousetrap v1.0.0
 	github.com/jackc/pgx v3.6.1-0.20190927150758-23388fecf653+incompatible
