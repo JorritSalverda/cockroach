@@ -36,7 +36,7 @@ require (
 	github.com/aws/aws-sdk-go v1.16.19
 	github.com/axiomhq/hyperloglog v0.0.0-20181223111420-4b99d0c2c99e
 	github.com/backtrace-labs/go-bcd v0.0.0-20171031183808-5d8e01b2f043
-	github.com/benesch/cgosymbolizer v0.0.0-20180702220239-70e1ee2b39d3
+	github.com/benesch/cgosymbolizer v0.0.0-20190515212042-bec6fe6e597b
 	github.com/beorn7/perks v1.0.0
 	github.com/biogo/store v0.0.0-20160505134755-913427a1d5e8
 	github.com/boltdb/bolt v1.3.1
@@ -100,6 +100,7 @@ require (
 	github.com/gorilla/websocket v1.4.0
 	github.com/grpc-ecosystem/grpc-gateway v1.9.5
 	github.com/grpc-ecosystem/grpc-opentracing v0.0.0-20180507213350-8e809c8a8645
+	github.com/ianlancetaylor/cgosymbolizer v0.0.0-20170921033129-f5072df9c550 // indirect
 	github.com/ianlancetaylor/demangle v0.0.0-20181102032728-5e5cf60278f6
 	github.com/inconshreveable/mousetrap v1.0.0
 	github.com/jackc/pgx v3.6.1-0.20190927150758-23388fecf653+incompatible
